@@ -1,0 +1,12 @@
+pandas
+openpyxl
+numpy
+scikit-learn
+google-generativeai
+streamlit
+plotly
+networkx
+matplotlib
+geodatasets
+PyPDF2
+fuzzywuzzy
