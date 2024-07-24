@@ -295,7 +295,7 @@ relacionamento_estados = {
     'DF': 4
 }
 # Configurações do Gemini
-genai.configure(api_key="AIzaSyCtj2xGASpn_FrNYW9D-Nbt_F8-CXpFypQ")  
+genai.configure(api_key="APIKEY")  
 MODELO_NOME = "gemini-1.5-pro"
 model = genai.GenerativeModel(MODELO_NOME)
 
@@ -1430,13 +1430,13 @@ def carregar_dados_mercado(caminho):
 @st.cache_data
 def load_data():
     df_combinado = carregar_e_tratar_dados(
-        "C:\\Users\\070283\\Downloads\\base de conhecimento-2024-07-05-13-12-28.xlsx",
-        "C:\\Users\\070283\\OneDrive - Construtora Barbosa Mello SA\\python\\projeto barbosa ai\\DADOS\\SF.xlsx",
-        "C:\\Users\\070283\\Downloads\\base de conhecimento-ganha.xlsx"
+        "base de conhecimento-2024-07-05-13-12-28.xlsx",
+        "SF.xlsx",
+        "base de conhecimento-ganha.xlsx"
     )
     
     df_mercado = carregar_dados_mercado(
-        r"C:\Users\070283\OneDrive - Construtora Barbosa Mello SA\python\projeto barbosa ai\DADOS\Industrial Info.xlsx"
+        "Industrial Info.xlsx"
     )
     
     info_sf = processar_dados_sf(df_combinado)
